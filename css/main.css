@@ -8,21 +8,25 @@
 header{
     display: flex;
     align-items: center;
-    /* justify-content: center; */
-    height: 100px;
     background-color: cornflowerblue;
     letter-spacing: 2px;
     font-size: 20px;
     color: white;
     flex-wrap: wrap;
     width: 100%;
-    padding: 20px;
+    padding: 13px;
+    /* background-color: #00aed9; */
+    background-image: url("https://www.transparenttextures.com/patterns/food.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 header h1{
     width: 100%;
     display: flex;
     justify-content: center;
+    font-size: 45px;
+    color: white;
+    font-weight: bolder;
 }
 
 header .plus-sign{    
@@ -39,8 +43,9 @@ header .team-score{
     display: flex;
     width: 100%;
     justify-content: end;
-    transform: translate(0, -120%);
+    /* transform: translate(0, -120%); */
     gap: 30px;
+    font-size: 16px;
 }
 
 .team-score .team{
@@ -51,13 +56,18 @@ header .team-score{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    padding: 10px 20px;
     position: relative;
+    height: 100vw;
+    justify-content: center;
 }
 
+.card-section-wrapper h3{
+    text-align: center;
+    font-size: 30px;
+}
 .card--section{
-    flex-grow: 1;
-    padding: 20px 10px;
+    width: 300px;
+    padding: 10px 10px;
     display: flex; 
     flex-direction: column;
     gap: 10px;
@@ -94,8 +104,8 @@ header .team-score{
 }
 
 .card-modal-wrapper{
-    position: absolute;
-    height: 100%;
+    position: fixed;
+    height: 100vh;
     overflow: auto;
     width: 100%;
     top: 0;
@@ -107,7 +117,7 @@ header .team-score{
 .card-modal{
     position: absolute;
     min-width: 60%;
-    top: 20px;
+    top: 20vh;
     background-color: white;
     border: 1px solid black;
     left: 50%;
@@ -173,4 +183,24 @@ header .team-score{
 
 .seconds{
     margin-left: 5px;
+}
+
+@media screen and (max-width: 768px){
+    header .team-score{
+        font-size: 12.5px;
+    }
+    .card--section {
+        width: 150px;
+    }
+    .card-modal {
+        font-size: 25px;
+        min-width: 75%;
+    }
+    .card-modal .timer {
+        font-size: 22px;
+    }
+    .card-modal button {
+        /* width: 100%; */
+        font-size: 16px;
+    }
 }
